@@ -1,0 +1,22 @@
+#!/bin/bash
+
+alias d='docker'
+alias m='multipass'
+alias mk='minikube'
+alias gop='gopass'
+alias web='web_search google'
+alias dc='docker-compose'
+alias cvdev='docker exec -it aws-cli'
+alias mynode='docker run --rm -it -v $JS_PROJECT:/js -w /js node:16-alpine3.13'
+alias python3='/usr/local/bin/python3'
+alias python='python3'
+alias pip='/usr/local/bin/pip3'
+#alias k='kubectl'
+alias ghph='gop show -c personal/github/passphrase'
+alias glph='gop show -c personal/gitlab/passphrase'
+alias r21='ssh -X ubuntu@192.168.1.21 -i $HOME/.ssh/vms/ubuntu'
+alias s20='ssh -X cv@192.168.1.20 -i $HOME/.ssh/vms/ubuntu'
+alias s31='ssh -X ubuntu@192.168.1.31 -i $HOME/.ssh/vms/ubuntu'
+alias s33='ssh -X ubuntu@192.168.1.31 -i $HOME/.ssh/vms/ubuntu'
+alias fsnd='ssh -X ubuntu@192.168.1.29 -i $HOME/.ssh/vms/ubuntu'
+#complete -F __start_kubectl k

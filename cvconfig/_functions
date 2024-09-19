@@ -1,0 +1,63 @@
+#!/bin/bash
+
+function vcode {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "Visual Studio Code" "$argPath"
+    fi
+}
+
+function atom {
+    if [[ $# = 0 ]]
+    then
+        open -a "Atom"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "Atom" "$argPath"
+    fi
+}
+
+function ij {
+    if [[ $# = 0 ]]
+    then
+        open -a "IntelliJ IDEA"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "IntelliJ IDEA" "$argPath"
+    fi
+}
+
+function ws {
+   if [[ $# = 0 ]]
+    then
+        open -a "WebStorm"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "WebStorm" "$argPath"
+    fi
+
+}
+
+function pc {
+   if [[ $# = 0 ]]
+    then
+        open -a "PyCharm"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "PyCharm" "$argPath"
+    fi
+
+}
+
+function docker_start {
+    minikube start --driver=hyperkit --container-runtime=docker
+    eval $(minikube docker-env)
+}
